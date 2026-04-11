@@ -1,0 +1,95 @@
+{
+    "_entity": "User",
+    "_description": "User account entity for e-commerce / SaaS applications",
+    "fields": [
+      {
+        "name": "id",
+        "type": "uuid",
+        "required": true,
+        "unique": true,
+        "description": "Primary key"
+      },
+      {
+        "name": "first_name",
+        "type": "string",
+        "max_length": 100,
+        "required": true
+      },
+      {
+        "name": "last_name",
+        "type": "string",
+        "max_length": 100,
+        "required": true
+      },
+      {
+        "name": "email",
+        "type": "email",
+        "max_length": 254,
+        "required": true,
+        "unique": true
+      },
+      {
+        "name": "phone",
+        "type": "phone",
+        "max_length": 20,
+        "required": false
+      },
+      {
+        "name": "date_of_birth",
+        "type": "date",
+        "min": "1900-01-01",
+        "max": "today - 18 years",
+        "required": false
+      },
+      {
+        "name": "street_address",
+        "type": "string",
+        "max_length": 255,
+        "required": false
+      },
+      {
+        "name": "city",
+        "type": "string",
+        "max_length": 100,
+        "required": false
+      },
+      {
+        "name": "state_province",
+        "type": "string",
+        "max_length": 100,
+        "required": false
+      },
+      {
+        "name": "postal_code",
+        "type": "string",
+        "max_length": 20,
+        "required": false
+      },
+      {
+        "name": "country_code",
+        "type": "string",
+        "max_length": 2,
+        "enum": ["US", "CA", "GB", "AU", "DE", "FR", "JP", "BR", "MX", "IN"],
+        "required": false
+      },
+      {
+        "name": "created_at",
+        "type": "datetime",
+        "auto": "now",
+        "required": true
+      },
+      {
+        "name": "account_status",
+        "type": "enum",
+        "values": ["active", "inactive", "suspended", "pending_verification"],
+        "default": "active",
+        "required": true
+      },
+      {
+        "name": "email_verified",
+        "type": "boolean",
+        "default": false,
+        "required": true
+      }
+    ]
+  }
