@@ -1,6 +1,6 @@
 {
     "name": "qa-engineering",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "A library of plugins for AI-assisted QA workflows",
     "author": {
         "name": "Zaier Aouani"
