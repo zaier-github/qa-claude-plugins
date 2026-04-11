@@ -1,0 +1,16 @@
+{
+    "name": "qa-engineering",
+    "version": "1.0.0",
+    "description": "A library of plugins for AI-assisted QA workflows",
+    "author": {
+        "name": "Zaier Aouani"
+    },
+    "url": "https://github.com/zaier-github/qa-engineering",
+    "keywords": [
+        "bug-archaeelogist",
+        "mutation-jury",
+        "regression-oracle",
+        "test-debt-cartographer",
+        "the-skeptic"
+    ]
+}

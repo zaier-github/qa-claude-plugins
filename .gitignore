@@ -1,0 +1,84 @@
+# Node artifacts
+node_modules/
+dist/
+
+# Compiled Java Classes
+*.class
+
+# Compiled Python Bytecode
+*.pyc
+
+# Compiled Python Eggs
+*.egg-info/
+
+# Compiled Python Wheels
+*.whl
+
+# Log files
+*.log
+
+# Cache files
+*.cache
+
+# Backup files
+*.backup
+
+# Temporary files
+*.tmp
+
+# Package files
+*.jar
+*.war
+*.ear
+*.sar
+*.apk
+*.ipa
+*.appx
+*.appxbundle
+*.appxupload
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
+
+# IDE files
+.idea/
+.vscode/
+.cursor/
+.cursorrules
+.cursorignore
+.cursorignorerules
+.cursorignorerulesrules
+.cursorignorerulesrulesrules
+.cursorignorerulesrulesrulesrules
+
+# Maven files
+target/
+.mvn/
+pom.xml
+pom.xml.bak
+pom.xml.bak.bak
+pom.xml.bak.bak.bak
+pom.xml.bak.bak.bak.bak
+pom.xml.bak.bak.bak.bak.bak
+pom.xml.bak.bak.bak.bak.bak.bak
+pom.xml.bak.bak.bak.bak.bak.bak.bak
+
+# Large media files
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.webm
+*.flv
+*.wmv
+*.mpeg
+*.mpg
+*.m4v
+*.m4a

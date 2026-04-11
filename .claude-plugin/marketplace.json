@@ -1,0 +1,14 @@
+{
+    "name": "qa-claude-plugins",
+    "owner": {
+        "name": "Zaier Aouani"
+    },
+    "plugins": [
+        {
+            "name": "qa-engineering",
+            "source": "./",
+            "description": "A library of plugins for QA",
+            "version": "1.0.0"
+        }
+    ]
+}
