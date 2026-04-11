@@ -1,0 +1,158 @@
+# Test Plan Template
+
+Use this template when writing `test-plan.md`.
+
+---
+
+```markdown
+# Test Plan: {Release / Milestone Name}
+
+**Version**: 1.0  
+**Date**: {YYYY-MM-DD}  
+**Prepared by**: QA Team  
+**Status**: Draft / Approved
+
+---
+
+## 1. Executive Summary
+
+{3–4 paragraph narrative:
+- Para 1: What is being tested and its business importance
+- Para 2: Key risks and how testing addresses them
+- Para 3: What "done" means for this testing effort
+- Para 4: Confidence level and any major caveats}
+
+| Metric | Value |
+|---|---|
+| Requirements in scope | N |
+| Test cases planned | N |
+| Regression automation target | X% |
+| Estimated test duration | X days / Y testers |
+| Overall risk level | High / Medium / Low |
+
+---
+
+## 2. Test Objectives
+
+1. Validate all {N} acceptance criteria across {N} requirements with at least one test case each
+2. Achieve zero open P1 and zero open P2 defects at release gate
+3. Confirm integration between {System A} and {System B} functions correctly under {conditions}
+4. Validate role-based access control for {role types}
+5. Achieve {X}% regression automation coverage
+
+---
+
+## 3. Scope
+
+### In scope
+- Requirements: {KEY-1} through {KEY-N}
+- Components: {list}
+- User workflows: {list}
+- Integration points: {list}
+- Platforms: {browsers, OS}
+
+### Out of scope
+- {Excluded area}: deferred to {next sprint / separate initiative}
+
+### Assumptions
+- Test environment will be available from {date/phase}
+- Test data (user accounts, sample records) will be seeded by {owner}
+- Third-party stubs/mocks will be provided by {owner}
+
+---
+
+## 4. Strategy Reference
+
+{If test-strategy.md exists}: See [Test Strategy](../test-strategy/test-strategy.md) for full details on test levels, test types, automation approach, and quality metrics.
+
+{If test-strategy.md doesn't exist}: Testing approach summary:
+- **Test levels**: Integration → System → UAT
+- **Primary test types**: Functional, Security (if applicable), Regression
+- **Automation**: Playwright E2E for regression suite, API tests for integration
+
+---
+
+## 5. Environment Requirements
+
+| Environment | Purpose | Owner | Availability |
+|---|---|---|---|
+| Staging / Test | System + integration testing | DevOps | Required |
+| UAT | Business acceptance | Business team | Required for UAT phase |
+| Performance | Load testing (if in scope) | QA / Infra | If applicable |
+
+**Data requirements**:
+- {Data item 1: e.g., "5 test user accounts across 3 roles"}
+- {Data item 2}
+
+---
+
+## 6. Schedule and Milestones
+
+| Phase | Activities | Duration | Dependencies |
+|---|---|---|---|
+| Test Planning & Prep | Finalize plan, set up environments, prepare test data | ~1 week | Requirements signed off |
+| Test Case Review | Review and refine generated test cases | ~3 days | Test cases complete |
+| Test Execution Round 1 | Execute all planned test cases | ~1–2 weeks | Env ready, build deployed |
+| Defect Fix & Retest | Fix P1/P2 defects, retest | ~3–5 days | Fixes delivered |
+| Regression | Run regression suite | ~2–3 days | Retest complete |
+| UAT | Business validation and sign-off | ~1 week | System testing exit criteria met |
+
+---
+
+## 7. Entry and Exit Criteria
+
+### Entry criteria (before test execution)
+- [ ] All planned test cases reviewed and approved
+- [ ] Test environment stable and verified
+- [ ] Required test data seeded
+- [ ] Build smoke suite passes (0 P1/P2 failures)
+- [ ] Prior iteration P1/P2 defects resolved
+
+### Exit criteria (before release)
+- [ ] All planned test cases executed
+- [ ] 0 open P1 defects
+- [ ] 0 open P2 defects (or all waived with documented rationale)
+- [ ] 100% of acceptance criteria covered
+- [ ] Regression suite passes
+- [ ] UAT sign-off received from product owner
+- [ ] Release notes reviewed and approved
+
+---
+
+## 8. Deliverables
+
+| Deliverable | Status | Location |
+|---|---|---|
+| Requirements Analysis | Complete | [requirements/](../requirements/requirements-index.md) |
+| Test Charter | {Complete / Not generated} | [test-charter/](../test-charter/test-charter-index.md) |
+| Test Strategy | {Complete / Not generated} | [test-strategy/](../test-strategy/test-strategy.md) |
+| Test Cases | {Complete / Not generated} | [test-cases/](../test-cases/test-cases-index.md) |
+| Risk Register | {Complete / Not generated} | [risk-register/](../risk-register/risk-register.md) |
+| Test Plan (this document) | Complete | [test-plan/](test-plan.md) |
+| Test Execution Report | Planned | test-execution/ |
+
+---
+
+## 9. Risk Management
+
+{If risk-register.md exists}: See [Risk Register](../risk-register/risk-register.md) for full risk analysis.
+
+**Top risks summary**:
+| Risk | Score | Level | Mitigation |
+|---|---|---|---|
+| {Risk 1} | {X} | High | {Brief mitigation} |
+
+---
+
+## 10. Approval
+
+| Role | Name | Approval | Date |
+|---|---|---|---|
+| QA Lead | | ☐ Approved | |
+| Product Owner | | ☐ Approved | |
+| Release Manager | | ☐ Approved | |
+
+---
+
+_Generated by generate-test-plan on {date}_
+```
