@@ -1,7 +1,7 @@
 ---
 name: generate-test-charter
 description: >
-  Generate exploratory test charters from analyzed Jira requirements for session-based testing. Use this skill when the user wants to create test charters, plan exploratory testing, or structure session-based testing — including when they say "generate test charters", "create exploratory test charters", "write test charters", "plan exploratory testing for these requirements", "create session-based test charters", or "generate charter documents". The skill reads from existing requirements analysis produced by the analyze-requirements skill and produces structured test charter markdown files ready for use by QA testers.
+  Generate exploratory test charters from analyzed Jira requirements for session-based testing. Use this skill when the user wants to create test charters, plan exploratory testing, or structure session-based testing — including when they say "generate test charters", "create exploratory test charters", "write test charters", "plan exploratory testing for these requirements", "create session-based test charters", "SBTM charters", "time-boxed testing sessions", "session-based testing management", or "generate charter documents". The skill reads from existing requirements analysis produced by the analyze-requirements skill and produces structured test charter markdown files ready for use by QA testers. Requires a prior analyze-requirements run.
 compatibility: >
   Requires a prior analyze-requirements run in agent-qa/YYYY-MM-DD-*/requirements/. Atlassian MCP not required.
 ---
@@ -86,6 +86,8 @@ When is this charter complete (time-boxed, or specific coverage reached, or spec
 ---
 
 ## Phase 4 — Generate charter files
+
+Read `references/charter-template.md` for the complete charter format before writing files.
 
 Write each charter to `test-charter-{KEY}.md` (or `test-charter-{GROUP}.md` for grouped charters).
 

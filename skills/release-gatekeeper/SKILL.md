@@ -122,6 +122,8 @@ Each criterion is normalized: `min(100%, (actual / target) × 100)`; for density
 
 ## Phase 6 — Calculate readiness and generate recommendation
 
+Use `references/metrics-formulas.md` for the readiness score formula, worked example, and benchmark interpretation.
+
 ```
 readiness = critical_score×0.50 + high_priority×0.30 + medium_priority×0.15 + optional_score×0.05
 ```
@@ -136,6 +138,8 @@ Map score to recommendation (see thresholds above).
 ---
 
 ## Phase 7 — Write release readiness report
+
+Read `references/release-readiness-template.md` for the complete report structure before writing.
 
 Write `release-readiness.md` with:
 

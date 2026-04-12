@@ -127,6 +127,8 @@ Using the requirements quality scores and component criticality:
 
 ## Phase 4 — Write strategy file
 
+Read `references/strategy-template.md` for the complete document structure before writing.
+
 Write `test-strategy.md` to `agent-qa/YYYY-MM-DD-{folder}/test-strategy/`. The document should read as a professional, strategic document — not a bullet list dump. Use section headings, tables where helpful, and prose for context.
 
 ---

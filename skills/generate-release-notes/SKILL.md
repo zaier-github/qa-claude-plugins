@@ -39,6 +39,8 @@ Scan for `agent-qa/YYYY-MM-DD-*/requirements/` folders. If only one exists, sele
 
 ## Phase 3 — Generate release note content
 
+Read `references/release-notes-template.md` for the complete output structure before writing.
+
 **Header section**:
 - Release name / version (infer from fixVersions in requirements or ask user)
 - Release date (use current date or ask user)
@@ -77,6 +79,8 @@ For each item:
 **Testing coverage**: reference test cases generated (if available) — number of test cases, coverage %, key test areas.
 
 ## Phase 4 — Generate traceability matrix
+
+Read `references/traceability-matrix-template.md` for the table format and coverage analysis structure.
 
 Create `traceability-matrix.md`:
 

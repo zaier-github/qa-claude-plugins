@@ -1,5 +1,7 @@
 # Process Metrics Formulas
 
+> **See also**: `quality-auditor/references/metrics-formulas.md` — the most complete metrics reference in the suite, covering defect density, quality rating thresholds, and benchmark comparisons.
+
 ## Cycle Time and Bottleneck Analysis
 
 ```

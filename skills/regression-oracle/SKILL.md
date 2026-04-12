@@ -52,6 +52,8 @@ mental model:
 - What is the primary code path being modified?
 - Is this a targeted surgical change, or a broad-impact refactor?
 
+Consult `references/change-type-profiles.md` to understand the typical risk profile for this change type — a dependency upgrade has a fundamentally different blast radius than a targeted bug fix.
+
 This matters because risk is always relative to intent. A one-line hotfix that touches a
 shared utility is higher risk than a 200-line feature addition in an isolated module.
 

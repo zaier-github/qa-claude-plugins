@@ -99,6 +99,8 @@ total_quality_benefits = defect_prevention_value + release_time_value
 
 ## Phase 5 — ROI and payback
 
+Consult `references/metrics-formulas.md` for worked examples, edge case handling, and alternative calculation scenarios.
+
 ```
 total_year1_benefits = time_savings_value + total_quality_benefits
 net_savings_year1 = total_year1_benefits - total_year1_costs
@@ -138,6 +140,8 @@ roi_3year = ((total_3year_benefits - total_3year_costs) / total_3year_costs) × 
 ---
 
 ## Phase 6 — Write ROI report
+
+Read `references/roi-report-template.md` for the complete report structure before writing.
 
 Write `automation-roi.md` with:
 

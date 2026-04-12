@@ -4,11 +4,14 @@ description: >
   Audits web pages and components for WCAG 2.1/2.2 accessibility compliance. Use this skill
   whenever the user wants to: scan a page for accessibility violations, check ARIA attributes,
   verify color contrast ratios, test keyboard navigation, audit alt text quality, produce an
-  accessibility report, or prepare for an accessibility audit or legal compliance review.
-  Trigger for phrases like "check accessibility", "WCAG compliance", "a11y audit", "screen reader
-  compatible", "ADA compliance", "check color contrast", "is my site accessible", "axe scan",
-  "tab order", or any request involving assistive technology compatibility. Even if the user just
-  says "check my page" or "audit this UI", trigger this skill if accessibility context is present.
+  accessibility report, check VoiceOver or NVDA or JAWS compatibility, verify screen reader
+  reading order, check focus trapping, test with assistive technology, or prepare for an
+  accessibility audit or legal compliance review. Trigger for phrases like "check accessibility",
+  "WCAG compliance", "a11y audit", "screen reader compatible", "ADA compliance", "check color
+  contrast", "contrast ratio", "is my site accessible", "axe scan", "tab order", "ARIA landmark",
+  "focus order", "keyboard trap", "VoiceOver", "NVDA", or any request involving assistive
+  technology compatibility. Even if the user just says "check my page" or "audit this UI",
+  trigger this skill if accessibility context is present.
 ---
 
 # Accessibility (A11y) Guardian
@@ -39,7 +42,7 @@ The scanner checks for ~100+ WCAG rules including: missing alt text, insufficien
 
 ### Step 2: Manual checks from the checklist
 
-Automated tools catch ~30-40% of accessibility issues. Read `references/manual_checklist.md` and work through each item that applies to the page type being audited. Key items that axe *cannot* check:
+Automated tools catch ~30-40% of accessibility issues. Read `references/manual-checklist.md` and work through each item that applies to the page type being audited. Key items that axe *cannot* check:
 
 - **Keyboard navigation**: Can the entire page be operated with Tab, Shift+Tab, Enter, Escape, and arrow keys?
 - **Focus visibility**: Is the keyboard focus indicator always visible (not just the browser default)?
@@ -60,7 +63,7 @@ If vision capability is available, describe each image and compare your descript
 
 ### Step 4: Produce the accessibility report
 
-Use `references/a11y_report_template.md`. WCAG violations map to impact levels:
+Use `references/a11y-report-template.md`. WCAG violations map to impact levels:
 
 | Impact | Meaning |
 |--------|---------|
@@ -88,7 +91,6 @@ WCAG AAA requires 7:1 for normal text, 4.5:1 for large text.
 
 ## Reference files
 
-- `references/manual_checklist.md` — Structured WCAG 2.1/2.2 manual testing checklist
-- `references/a11y_report_template.md` — Report output format
-- `references/wcag_quick_reference.md` — Quick lookup for WCAG success criteria
+- `references/manual-checklist.md` — Structured WCAG 2.1/2.2 manual testing checklist
+- `references/a11y-report-template.md` — Report output format
 - `scripts/axe_scan.py` — Automated axe-core scanning via Playwright

@@ -49,6 +49,8 @@ All files written to `agent-qa/YYYY-MM-DD-{folder}/test-cases/`:
 
 ## Phase 3 — Generate test cases
 
+Read `references/priority-guide.md` now — use it to assign P1–P4 priorities correctly throughout generation.
+
 **Language detection**: Before writing test cases, detect the dominant language of each requirement (check locale fields, then use character/word heuristics). Write all test cases in the same language as their source requirement. If confidence < 70%, ask the user.
 
 For each requirement, generate three categories:
@@ -80,6 +82,8 @@ Cover: min/max boundary values, empty/null inputs, special characters, concurren
 - Tests with > 15 steps are split into multiple test cases
 
 ## Phase 4 — Generate output files
+
+Read `references/test-case-template.md` for the full YAML front matter and markdown structure. Read `references/xray-csv-guide.md` for CSV column formats, field escaping rules, and Xray/TestRail differences before generating export files.
 
 **Individual markdown files** (`test-cases-{KEY}.md`):
 

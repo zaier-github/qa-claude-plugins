@@ -33,7 +33,7 @@ Proactively hunts for "low-hanging fruit" security vulnerabilities during QA. Yo
 python scripts/fuzz_inputs.py --url <URL> --output /tmp/fuzz-results/
 ```
 
-The fuzzer finds forms on the page, submits payloads from `references/fuzz_payloads.md` into each field, and reports which payloads caused unexpected behavior (reflected content, errors, unusual responses).
+The fuzzer finds forms on the page, submits payloads from `references/fuzz-payloads.md` into each field, and reports which payloads caused unexpected behavior (reflected content, errors, unusual responses).
 
 **What it checks:**
 - XSS reflection: does the payload appear unescaped in the response?
@@ -58,7 +58,7 @@ For CI integration, add this as a PR check step.
 
 ### Option C: OWASP Top 10 checklist review
 
-Load `references/owasp_top10_checklist.md` and work through the checklist for the feature being tested. Each item includes:
+Load `references/owasp-top10-checklist.md` and work through the checklist for the feature being tested. Each item includes:
 - What the risk is (one sentence)
 - What to check in QA
 - What a vulnerable response looks like
@@ -85,8 +85,8 @@ Checks for presence and correctness of: `Content-Security-Policy`, `Strict-Trans
 
 ## Reference files
 
-- `references/fuzz_payloads.md` — Curated XSS, SQLi, and injection payloads for QA
-- `references/owasp_top10_checklist.md` — OWASP Top 10 QA checklist
+- `references/fuzz-payloads.md` — Curated XSS, SQLi, and injection payloads for QA
+- `references/owasp-top10-checklist.md` — OWASP Top 10 QA checklist
 - `scripts/fuzz_inputs.py` — Form fuzzing script (Playwright-based)
 - `scripts/scan_dependencies.py` — Dependency CVE scanner (OSV API)
 - `scripts/check_headers.py` — Security headers checker

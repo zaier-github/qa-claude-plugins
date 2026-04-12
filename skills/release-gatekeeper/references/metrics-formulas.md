@@ -1,5 +1,7 @@
 # Release Readiness Formulas
 
+> **See also**: `quality-auditor/references/metrics-formulas.md` — the most complete metrics reference in the suite, covering defect density, pass rate thresholds, and coverage benchmarks.
+
 ## Readiness Score
 
 ```

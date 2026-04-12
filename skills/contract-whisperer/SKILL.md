@@ -53,7 +53,7 @@ Identify what kind of schema you're working with and read the corresponding refe
 | Format | Signal | Reference |
 |--------|--------|-----------|
 | OpenAPI / Swagger | `.yaml`/`.json` with `openapi:` or `swagger:` key | `references/openapi-analysis.md` |
-| GraphQL | `.graphql`/`.gql` or SDL syntax with `type`, `Query`, `Mutation` | `references/graphql-analysis.md` |
+| GraphQL | `.graphql`/`.gql` or SDL syntax with `type`, `Query`, `Mutation` | `references/graphqa-analysis.md` |
 | gRPC / Protobuf | `.proto` files with `message`, `service`, `rpc` keywords | `references/protobuf-analysis.md` |
 | AsyncAPI / Events | `.yaml` with `asyncapi:` key, or event payload JSON schemas | `references/asyncapi-analysis.md` |
 | Plain JSON / TypeScript | Raw JSON shapes, TypeScript interfaces, Zod schemas, etc. | `references/json-shape-analysis.md` |
@@ -177,7 +177,7 @@ impact, and whether the change set is safe to deploy as-is.
 
 - `references/breaking-change-taxonomy.md` — Classification rules for breaking vs. non-breaking
 - `references/openapi-analysis.md` — How to diff and analyze OpenAPI/Swagger specs
-- `references/graphql-analysis.md` — How to diff and analyze GraphQL schemas
+- `references/graphqa-analysis.md` — How to diff and analyze GraphQL schemas
 - `references/protobuf-analysis.md` — How to diff and analyze .proto files
 - `references/asyncapi-analysis.md` — How to diff and analyze event/AsyncAPI schemas
 - `references/json-shape-analysis.md` — How to diff plain JSON shapes and TypeScript interfaces

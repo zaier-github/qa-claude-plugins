@@ -41,7 +41,7 @@ When given a bug report, analyze it and suggest related test areas. The goal: fi
 
 ## The SFDPOT Heuristic Framework
 
-Load `references/sfdpot_heuristic.md` for full details. Summary:
+Load `references/sfdpot-heuristic.md` for full details. Summary:
 
 | Letter | Category | What to test |
 |--------|----------|-------------|
@@ -146,6 +146,6 @@ Test: [one specific check that confirms or rules out the broader issue]
 
 ## Reference files
 
-- `references/sfdpot_heuristic.md` — Full SFDPOT heuristic guide with examples
-- `references/testing_heuristics_cheatsheet.md` — Quick reference of all testing heuristics
-- `references/test_charter_template.md` — Blank charter to fill in
+- `references/sfdpot-heuristic.md` — Full SFDPOT heuristic guide with examples
+- `references/testing-heuristic-cheatsheet.md` — Quick reference of all testing heuristics
+- `references/test-charter-template.md` — Blank charter to fill in

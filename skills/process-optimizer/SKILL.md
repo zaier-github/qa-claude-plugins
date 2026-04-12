@@ -56,6 +56,8 @@ issuetype IN (Bug, Defect) AND "Epic Link" = {epic_id}
 
 ## Phase 2 — Risk identification (planning lens)
 
+Read `references/risk-categories.md` for the full keyword catalog and default scores before scanning.
+
 Scan epic description + story content for risk indicators:
 
 | Risk type | Keywords | Default impact/prob |
@@ -79,6 +81,8 @@ Prioritize: Critical (≥ 20), High (15–19), Medium (9–14), Low (< 9).
 ---
 
 ## Phase 3 — Bottleneck analysis (execution lens)
+
+Use `references/metrics-formulas.md` for the cycle time formula, DORA benchmark values, and MTTR calculation.
 
 Compute cycle time per workflow stage from status transition history:
 
@@ -180,6 +184,8 @@ List all created ticket keys in the report.
 ---
 
 ## Phase 6 — Write report
+
+Read `references/optimization-report-template.md` for the full report structure before writing.
 
 Write `process-optimization.md` with:
 

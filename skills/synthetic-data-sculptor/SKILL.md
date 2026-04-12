@@ -5,10 +5,11 @@ description: >
   databases. Use this skill whenever the user needs: fake but realistic test data, edge case data
   (boundary values, special characters, extreme lengths), data for specific demographics or
   scenarios (e.g., "elderly users with expired cards"), stress-test data (huge strings, RTL text,
-  far-future dates), or safe anonymized stand-ins for production data. Trigger for phrases like
-  "generate test data", "fake data", "seed the database", "create sample users", "test fixtures",
-  "mock data", "stress data", "edge case data", "generate N records", or any request to produce
-  structured data for testing purposes.
+  far-future dates), safe anonymized stand-ins for production data, or factory-based fixture
+  generation. Trigger for phrases like "generate test data", "fake data", "seed the database",
+  "create sample users", "test fixtures", "mock data", "stress data", "edge case data",
+  "generate N records", "Faker data", "seed file", "fixture file", "data generator", "factory
+  data", or any request to produce structured data for testing purposes.
 ---
 
 # Synthetic Data Sculptor
@@ -34,7 +35,7 @@ If the user provides a SQL schema, database migration file, or API spec, parse i
 |----------|----------|
 | Standard realistic data | Use `scripts/generate_data.py` with Faker |
 | Specific demographics / scenarios | Use LLM-guided generation with `scripts/generate_data.py --scenario` |
-| Edge cases / stress data | Use `references/edge_case_catalog.md` as input spec |
+| Edge cases / stress data | Use `references/edge-case-catalog.md` as input spec |
 | SQL INSERT format | Add `--format sql` flag and provide table name |
 | Relational data (FK constraints) | Generate parents first, use their IDs for child records |
 
@@ -105,6 +106,6 @@ Pre-built schemas in `references/schema_templates/`:
 
 ## Reference files
 
-- `references/edge_case_catalog.md` — Comprehensive edge case values by data type
+- `references/edge-case-catalog.md` — Comprehensive edge case values by data type
 - `references/schema_templates/` — Pre-built entity schemas
 - `scripts/generate_data.py` — Main data generation script (Faker-based)

@@ -76,6 +76,8 @@ For each ticket, synthesize:
 
 ## Phase 6 — Generate commit analysis files
 
+Read `references/commit-analysis-template.md` for the commit analysis file structure before writing.
+
 For each Jira ticket, write `{KEY}-commits.md` to the commits folder:
 - Ticket summary and link
 - Commits table (SHA, author, date, message)

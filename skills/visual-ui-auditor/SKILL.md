@@ -4,10 +4,13 @@ description: >
   Audits web UIs for visual consistency, design system compliance, dark patterns, and layout shifts.
   Use this skill whenever the user wants to: check a webpage against a design system or style guide,
   compare screenshots to a golden standard, detect UI regressions, flag accessibility-adjacent visual
-  issues (low contrast, hidden buttons, misleading affordances), or catch layout shifts during page
-  load. Trigger this skill for requests like "check my UI matches the design", "compare these
-  screenshots", "find dark patterns", "visual regression test", "does my page follow brand guidelines",
-  or any task involving systematic visual inspection of a web interface.
+  issues (low contrast, hidden buttons, misleading affordances), catch layout shifts during page load,
+  compare a live implementation against a Figma design, audit for design token compliance, or verify
+  that a component library is implemented correctly. Trigger this skill for requests like "check my UI
+  matches the design", "compare these screenshots", "find dark patterns", "visual regression test",
+  "does my page follow brand guidelines", "pixel-perfect check", "check against Figma", "audit design
+  system compliance", "design token audit", "CLS check", or any task involving systematic visual
+  inspection of a web interface.
 ---
 
 # Visual UI/UX Auditor
@@ -70,7 +73,7 @@ python scripts/color_extractor.py --image /tmp/ui-capture/viewport.png
 
 ### Step 4: Produce the audit report
 
-Use the report template at `references/audit_report_template.md`. Fill in every section. Severity levels:
+Use the report template at `references/audit-report-template.md`. Fill in every section. Severity levels:
 
 | Level | Meaning |
 |-------|---------|
@@ -93,6 +96,6 @@ Always include:
 ## Reference files
 
 - `references/design_system_template.json` — Default design system schema to audit against; replace with user's own spec
-- `references/audit_report_template.md` — Report output format
+- `references/audit-report-template.md` — Report output format
 - `scripts/capture_ui.py` — Playwright-based UI capture
 - `scripts/color_extractor.py` — Extracts dominant colors from screenshots using Pillow

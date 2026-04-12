@@ -61,6 +61,8 @@ Assign each risk to a category:
 
 ## Phase 5 — Score risks
 
+Read `references/risk-scoring-guide.md` for the full scoring rubric with annotated examples before assigning scores.
+
 **Probability scale (1–5)**:
 - 1 Very Low: < 10% chance of occurring
 - 2 Low: 10–30%
@@ -100,6 +102,8 @@ For **high and critical risks only** (score ≥ 15):
 - **Timeline**: how quickly the response must begin
 
 ## Phase 8 — Prioritize and write risk register
+
+Read `references/risk-register-template.md` for the complete output format before writing.
 
 Sort risks: Critical first, then High, Medium, Low. Within same score: business impact, then probability.
 

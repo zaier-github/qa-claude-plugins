@@ -56,6 +56,8 @@ Run these queries in parallel:
 
 ## Phase 3 — Defect density
 
+Use `references/metrics-formulas.md` for the density formulas, quality rating thresholds, and industry benchmarks referenced in this phase.
+
 Compute three density measures:
 
 ```
@@ -128,6 +130,8 @@ Also report: count of issues currently blocked (status = "Blocked" or has `block
 ---
 
 ## Phase 6 — Synthesize and write report
+
+Read `references/quality-dashboard-template.md` for the complete dashboard structure before writing.
 
 Write `quality-audit.md` with:
 

@@ -1,5 +1,7 @@
 # ROI and Automation Metrics Formulas
 
+> **See also**: `quality-auditor/references/metrics-formulas.md` — the most complete metrics reference in the suite, covering defect density, automation ratio targets, and quality benchmarks referenced in the ROI model.
+
 ## ROI Calculation
 
 ```

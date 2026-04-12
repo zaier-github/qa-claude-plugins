@@ -147,6 +147,8 @@ List required approvals before testing begins and before release:
 
 ## Phase 4 — Write plan file
 
+Read `references/test-plan-template.md` for the complete document structure before writing.
+
 Write `test-plan.md` to `agent-qa/YYYY-MM-DD-{folder}/test-plan/`. Write for dual audience: executive summary for stakeholders, detailed sections for the QA team.
 
 ---

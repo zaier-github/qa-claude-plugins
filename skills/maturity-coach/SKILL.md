@@ -85,6 +85,8 @@ issuetype = Test OR labels = "test-case"
 
 ## Phase 2 — Score each dimension
 
+Read `references/maturity-model.md` for the full 6-dimension scoring rubric and level descriptors — use it alongside the scoring tables below.
+
 ### Dimension 1: Test Coverage (weight 25%)
 
 `automation_pct = automated_tests / total_tests × 100`
@@ -217,6 +219,8 @@ Priority order: dimensions with the highest weight and lowest score first.
 ---
 
 ## Phase 5 — Write report
+
+Read `references/maturity-report-template.md` for the baseline and progress report templates before writing.
 
 **Baseline mode** (`maturity-baseline.md`):
 

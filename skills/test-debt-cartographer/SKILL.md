@@ -119,7 +119,9 @@ Read `references/structural-patterns.md` for a full catalog of patterns to look 
 
 ### Phase 5 — Write the Coverage Risk Map
 
-Read `references/risk-map-template.md` before writing. The map includes:
+Read `references/risk-map-template.md` before writing. Consult `references/domain-coverage-targets.md` when setting recommended coverage targets — the right threshold varies significantly by domain (payments vs. utilities, auth vs. reporting).
+
+The map includes:
 
 1. **Executive summary** — Overall health, the single most dangerous gap, what it would
    take to meaningfully improve coverage in one sprint
