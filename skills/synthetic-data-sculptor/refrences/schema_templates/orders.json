@@ -1,0 +1,20 @@
+{
+    "_entity": "Order",
+    "_description": "E-commerce order",
+    "_foreign_keys": ["user_id references users.id"],
+    "fields": [
+      { "name": "id", "type": "uuid", "required": true, "unique": true },
+      { "name": "user_id", "type": "uuid", "required": true, "fk": "users.id" },
+      { "name": "order_number", "type": "string", "pattern": "ORD-{YYYYMMDD}-{6_digit_random}", "unique": true },
+      { "name": "status", "type": "enum", "values": ["pending", "confirmed", "processing", "shipped", "delivered", "cancelled", "refunded"], "default": "pending" },
+      { "name": "subtotal_cents", "type": "integer", "min": 0, "max": 9999999 },
+      { "name": "tax_cents", "type": "integer", "min": 0 },
+      { "name": "shipping_cents", "type": "integer", "min": 0 },
+      { "name": "total_cents", "type": "integer", "min": 0, "description": "subtotal + tax + shipping" },
+      { "name": "currency", "type": "string", "max_length": 3, "default": "USD" },
+      { "name": "shipping_address", "type": "object", "fields": ["street", "city", "state", "postal_code", "country"] },
+      { "name": "created_at", "type": "datetime" },
+      { "name": "shipped_at", "type": "datetime", "required": false },
+      { "name": "delivered_at", "type": "datetime", "required": false }
+    ]
+  }
