@@ -1,0 +1,120 @@
+{
+  "skill_name": "pom-generator",
+  "evals": [
+    {
+      "id": 1,
+      "eval_name": "html-login-python-playwright",
+      "prompt": "I have this HTML for our app's login page and need to write automation for it in Python using Playwright. Can you generate a page object model?\n\n```html\n<div class=\"login-container\">\n  <h1>Sign In</h1>\n  <form id=\"login-form\">\n    <div class=\"form-group\">\n      <label for=\"email\">Email address</label>\n      <input type=\"email\" id=\"email\" name=\"email\" placeholder=\"Enter email\" required>\n    </div>\n    <div class=\"form-group\">\n      <label for=\"password\">Password</label>\n      <input type=\"password\" id=\"password\" name=\"password\" placeholder=\"Enter password\" required>\n    </div>\n    <div class=\"form-check\">\n      <input type=\"checkbox\" id=\"remember-me\" name=\"remember\">\n      <label for=\"remember-me\">Remember me</label>\n    </div>\n    <div class=\"alert alert-danger\" id=\"error-message\" style=\"display:none\">\n      Invalid credentials. Please try again.\n    </div>\n    <button type=\"submit\" id=\"login-btn\" class=\"btn btn-primary\">Sign In</button>\n    <a href=\"/forgot-password\" class=\"forgot-link\">Forgot your password?</a>\n  </form>\n</div>\n```",
+      "expected_output": "A Python class (LoginPage) using Playwright sync API with locator properties for all elements (email, password, remember-me checkbox, error message, forgot-password link), action methods (enter_email, enter_password, click_login, click_forgot_password), and state/verification methods (get_error_message, is_error_visible). Optionally a BasePage class. No test assertions inside the POM.",
+      "files": [],
+      "assertions": [
+        {
+          "id": "uses-python-syntax",
+          "text": "Output uses Python syntax (class definition, def, self, snake_case method names)"
+        },
+        {
+          "id": "uses-playwright-api",
+          "text": "Output uses Playwright Python API (page, Locator, get_by_label / get_by_role / locator methods)"
+        },
+        {
+          "id": "class-named-login-page",
+          "text": "Defines a class named LoginPage (or similar descriptive name)"
+        },
+        {
+          "id": "covers-all-elements",
+          "text": "Covers all 5 key elements: email input, password input, remember-me checkbox, error message, forgot-password link"
+        },
+        {
+          "id": "has-action-methods",
+          "text": "Has named action methods for filling email, filling password, and clicking the login button"
+        },
+        {
+          "id": "has-verification-methods",
+          "text": "Has at least one state/verification method that returns text or boolean (e.g., get_error_message, is_error_visible)"
+        },
+        {
+          "id": "no-assertions-in-pom",
+          "text": "No test assertions (assert statements) inside the POM class itself"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "eval_name": "url-login-typescript-playwright-testid",
+      "prompt": "I want to create a TypeScript + Playwright page object model for the login page at https://www.saucedemo.com. We prefer data-testid attributes for selectors.",
+      "expected_output": "A TypeScript class (LoginPage) using Playwright's TypeScript API with readonly Locator fields, using getByTestId or data-testid CSS selectors for the saucedemo login page elements (username input, password input, login button, error container). Action methods enterUsername, enterPassword, clickLogin. At least one verification method. Should reflect actual saucedemo DOM (data-test attributes like 'user-name', 'password', 'login-button', 'error-button-container').",
+      "files": [],
+      "assertions": [
+        {
+          "id": "uses-typescript-syntax",
+          "text": "Output uses TypeScript syntax (type annotations, readonly, async/await, export class)"
+        },
+        {
+          "id": "uses-playwright-api",
+          "text": "Output uses Playwright TypeScript API (Page, Locator, getByTestId or locator with data-testid)"
+        },
+        {
+          "id": "class-named-login-page",
+          "text": "Defines a class named LoginPage (or similar)"
+        },
+        {
+          "id": "prefers-testid-selectors",
+          "text": "Uses data-testid / getByTestId selectors for at least the primary interactive elements"
+        },
+        {
+          "id": "covers-saucedemo-elements",
+          "text": "Covers username input, password input, and login button (the core saucedemo login elements)"
+        },
+        {
+          "id": "has-verification-methods",
+          "text": "Has at least one verification/state method (e.g., getErrorMessage, isErrorVisible)"
+        },
+        {
+          "id": "no-assertions-in-pom",
+          "text": "No test assertions inside the POM class"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "eval_name": "jsx-checkout-java-playwright-semantic",
+      "prompt": "Here's a React component for our checkout form. Can you generate a Java Playwright page object model for it? We're using semantic selectors (ARIA roles and labels).\n\n```jsx\nimport React, { useState } from 'react';\n\nfunction CheckoutForm({ onSubmit }) {\n  const [formData, setFormData] = useState({\n    firstName: '', lastName: '', email: '', cardNumber: '', expiry: '', cvv: ''\n  });\n  const [errors, setErrors] = useState({});\n\n  return (\n    <div className=\"checkout-form\">\n      <h2>Payment Details</h2>\n      <div className=\"form-row\">\n        <input\n          type=\"text\"\n          aria-label=\"First name\"\n          placeholder=\"First name\"\n          value={formData.firstName}\n          onChange={e => setFormData({...formData, firstName: e.target.value})}\n        />\n        <input\n          type=\"text\"\n          aria-label=\"Last name\"\n          placeholder=\"Last name\"\n          value={formData.lastName}\n          onChange={e => setFormData({...formData, lastName: e.target.value})}\n        />\n      </div>\n      <input\n        type=\"email\"\n        aria-label=\"Email address\"\n        placeholder=\"Email\"\n        value={formData.email}\n      />\n      <input\n        type=\"text\"\n        aria-label=\"Card number\"\n        placeholder=\"Card number\"\n        data-testid=\"card-number\"\n        value={formData.cardNumber}\n      />\n      <div className=\"form-row\">\n        <input type=\"text\" aria-label=\"Expiry date\" placeholder=\"MM/YY\" value={formData.expiry} />\n        <input type=\"text\" aria-label=\"CVV\" placeholder=\"CVV\" value={formData.cvv} />\n      </div>\n      {Object.keys(errors).length > 0 && (\n        <div className=\"error-summary\" role=\"alert\">\n          Please fix the errors below.\n        </div>\n      )}\n      <button type=\"button\" className=\"btn-secondary\" onClick={() => window.history.back()}>\n        Back to cart\n      </button>\n      <button type=\"submit\" className=\"btn-primary\" data-testid=\"place-order-btn\">\n        Place order\n      </button>\n    </div>\n  );\n}\n```",
+      "expected_output": "A Java class (CheckoutPage or CheckoutFormPage) using Playwright Java API with Locator fields defined using getByLabel for aria-labeled inputs. Should cover all 6 inputs (first name, last name, email, card number, expiry, cvv), error summary, back button, and place order button. Methods named after user actions (enterFirstName, enterLastName, etc., clickPlaceOrder, clickBackToCart). Verification method for error state. BasePage optional.",
+      "files": [],
+      "assertions": [
+        {
+          "id": "uses-java-syntax",
+          "text": "Output uses Java syntax (class, public/private, return types, PascalCase class name)"
+        },
+        {
+          "id": "uses-playwright-java-api",
+          "text": "Output uses Playwright Java API (Page, Locator, page.getByLabel / page.getByRole / page.locator)"
+        },
+        {
+          "id": "class-named-checkout-page",
+          "text": "Defines a Java class with a descriptive name ending in 'Page' (e.g., CheckoutPage, CheckoutFormPage)"
+        },
+        {
+          "id": "prefers-semantic-locators",
+          "text": "Uses getByLabel() or getByRole() for the aria-labeled inputs rather than CSS/XPath"
+        },
+        {
+          "id": "covers-all-form-fields",
+          "text": "Covers all 6 form fields: first name, last name, email, card number, expiry, CVV"
+        },
+        {
+          "id": "covers-buttons-and-error",
+          "text": "Covers both buttons (back to cart, place order) and the error summary element"
+        },
+        {
+          "id": "has-action-methods",
+          "text": "Has named action methods for filling form fields and clicking both buttons"
+        },
+        {
+          "id": "no-assertions-in-pom",
+          "text": "No test assertions inside the POM class"
+        }
+      ]
+    }
+  ]
+}
